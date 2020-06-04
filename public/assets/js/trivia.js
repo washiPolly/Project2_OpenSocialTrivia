@@ -11,8 +11,8 @@ $(document).ready(function () {
   
   //event listners for each button clicked to call correct API
   $("#film").on("click", function () {
-    var sec = 2 ;
-    var time = setInterval(myTimer, 1000);
+    // var sec = 2 ;
+    // var time = setInterval(myTimer, 1000);
     $("#displayTrivia").empty();
     console.log(film);
      hideSocketDiv();
@@ -35,26 +35,26 @@ $(document).ready(function () {
   });
 
   $("#tv").on("click", function () {
-    hideSocketDiv();
+    //hideSocketDiv();
     $("#displayTrivia").empty();
        generateTrivia(tv);
   });
 
   $("#sports").on("click", function () {
     $("#displayTrivia").empty();
-    hideSocketDiv();
+   // hideSocketDiv();
     generateTrivia(sports);
   });
 
   $("#compSci").on("click", function () {
     $("#displayTrivia").empty();
-    hideSocketDiv();
+    //hideSocketDiv();
     generateTrivia(compSci);
   });
 
   $("#userQ").on("click", function(){
     $("#displayTrivia").empty();
-    hideSocketDiv();
+   // hideSocketDiv();
     generateTrivia("/api/userQuestions");
   });
 
@@ -77,7 +77,7 @@ $(document).ready(function () {
       //for (var i = 0; i < results.length; i++) {
         var col = $("<div>").addClass("col s9 m9 l9");
         var card = $("<div>").addClass("card white-text pink accent-4");
-        var body = $("<div>").addClass("card-content");
+        var body = $("<div>").addClass("mainQ card-content");
 
         // var m1 = $("<p>").addClass("card-content").text("a. " + results[i].incorrect_answers[0]);
         // var m2 = $("<p>").addClass("card-content").text("b. " + results[i].incorrect_answers[1]);
@@ -163,12 +163,12 @@ $(document).ready(function () {
   // });
 
 
-  var seconds = document.getElementById("countdown").textContent;
-  var countdown = setInterval(function () {
-    seconds--;
-    document.getElementById("countdown").textContent = seconds;
-    if (seconds <= 0) clearInterval(countdown);
-  }, 1000);
+  // var seconds = document.getElementById("countdown").textContent;
+  // var countdown = setInterval(function () {
+  //   seconds--;
+  //   document.getElementById("countdown").textContent = seconds;
+  //   if (seconds <= 0) clearInterval(countdown);
+  // }, 1000);
 
  function hideSocketDiv(){
   var socketDiv = document.getElementById('staticCard')

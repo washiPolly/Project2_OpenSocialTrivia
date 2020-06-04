@@ -8,9 +8,11 @@ var {userJoin, getCurrentUser, userLeaves} = require("./public/assets/js/users")
 let UserTransactions = require('./transactions/user')
 
 
+
+
 // Initialize the app and create port
 var PORT = process.env.PORT || 8000;
-var app = express();
+var app = express(); 
 
 
 app.use(express.static("public"));
