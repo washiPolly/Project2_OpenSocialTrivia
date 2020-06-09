@@ -205,8 +205,20 @@ io.on('connection', function (socket) {
  
 });
 
+//compression
+var compression = require('compression')
 
-
+app.use(compression({ filter: shouldCompress }))
+ 
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+ 
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({
