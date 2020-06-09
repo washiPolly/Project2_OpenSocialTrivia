@@ -1,5 +1,7 @@
 # Project: Open-Social-Trivia 
 
+https://gentle-badlands-88818.herokuapp.com/
+
 User Story:
 
 During quarantine, you and your friends can sign up to this app and take a quick break from work, news, and homework. You don't have to completely stop socializing from your friends!
